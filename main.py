@@ -3,7 +3,6 @@ def main():
   text = readText('books/frankenstein.txt')
   report(text)
 
-
 def readText(path):
   with open(path) as f:
     text = f.read()
@@ -22,7 +21,7 @@ def report(text):
   count_words(text)
   print()
   for i in alphabets:
-    number_of_times = text.lower().find(i)
+    number_of_times = text.lower().count(i)
     print(f"The {i} character was found {number_of_times} times")
 
 main()
